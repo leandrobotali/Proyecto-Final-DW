@@ -37,8 +37,25 @@
                     transform: scale(1.2);
                     background-color: $colorPrimario;
                     border-radius: 10px;
-                    color: lighten($color: $colorSecundario, $amount: 10%);
+                    color: lighten($color: $colorSecundario, $amount: 20%);
                 }
+
+            }
+
+            .nav_enlace--dropdown{
+                color:$colorSecundario;
+                
+                &:hover {
+                    transform: scale(1.1);
+                    background-color: $colorPrimario;
+                    color: lighten($color: $colorSecundario, $amount: 20%);
+                }
+            }
+
+            .dropdown-menu{
+                background-color: $colorPrimario;
+                width: 250px;
+                text-align: center;
             }
         }
     }

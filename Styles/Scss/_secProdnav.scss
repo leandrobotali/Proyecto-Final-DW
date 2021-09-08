@@ -1,0 +1,35 @@
+.secProdnav{
+    @include flex(row,center,center,nowrap);
+    width: 100%;
+    margin: auto;
+    
+    .container{
+        width: 100%;
+        padding: 0;
+
+        .secProdnav__nav{
+            @include flex(row,center,center,nowrap);
+            background-color: $colorSecundario;
+            width:100%;
+            padding: 10px;
+
+            .secProdnav__ul{
+                @include flex(row,space-between,center,nowrap);
+
+                .nav-item{
+                    margin: 0 100px;
+                    padding: 0;
+
+                    .nav__link{
+                        color: $colorPrimario;
+                        padding: 0;
+
+                        &:hover{
+                            color: lighten($color: $colorPrimario, $amount: 10%);
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

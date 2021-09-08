@@ -46,19 +46,28 @@
                         <div class="collapse navbar-collapse" id="navbarSupportedContent">
                             <ul class="navbar-nav">
                                 <li class="nav-item margen-r-3">
-                                    <a class="nav_enlace nav-link" href="index.html">Inicio</a>
+                                    <a class="nav_enlace nav-link" href="./index.html">Inicio</a>
+                                </li>                                
+                                <li class="nav-item dropdown margen-r-3">
+                                    <a class="nav_enlace nav-link dropdown-toggle" href="productosyservicios.html" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                        Productos y Servicios
+                                    </a>
+                                    <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                      <li><a class="nav_enlace--dropdown dropdown-item" href="./productosyservicios/internet50mb.html">Internet</a></li>
+                                      <li><hr class="dropdown-divider"></li>
+                                      <li><a class="nav_enlace--dropdown dropdown-item" href="#">tv</a></li>
+                                      <li><hr class="dropdown-divider"></li>
+                                      <li><a class="nav_enlace--dropdown dropdown-item" href="#">movil</a></li>
+                                    </ul>
+                                  </li>
+                                <li class="nav-item margen-r-3">
+                                    <a class="nav_enlace nav-link" href="./tiendadeequipos.html">Tienda de Equipos</a>
                                 </li>
                                 <li class="nav-item margen-r-3">
-                                    <a class="nav_enlace nav-link" href="productosyservicios.html">Productos y Servicios</a>
-                                </li>
-                                <li class="nav-item margen-r-3">
-                                    <a class="nav_enlace nav-link" href="tiendadeequipos.html">Tienda de Equipos</a>
-                                </li>
-                                <li class="nav-item margen-r-3">
-                                    <a class="nav_enlace nav-link" href="micuenta.html">Mi Cuenta</a>
+                                    <a class="nav_enlace nav-link" href="./micuenta.html">Mi Cuenta</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav_enlace nav-link" href="contacto.html">Contacto</a>
+                                    <a class="nav_enlace nav-link" href="./contacto.html">Contacto</a>
                                 </li>
                             </ul>
                         </div>
@@ -68,7 +77,46 @@
         </div>
     </header>
 
-    <section class="navbarProd">
+    <section>
+        <div class="card">
+            <div class="card-header card__header">
+                <ul class="nav nav-tabs card-header-tabs" id="myTab" role="tablist">
+                    <li class="nav-item" role="presentation">
+                        <a class="nav__link active" id="internet-tab" data-bs-toggle="tab" href="#internet" role="tab" aria-controls="internet" aria-selected="true">INTERNET</a>
+                    </li>
+                    <li class="nav-item" role="presentation">
+                        <a class="nav__link" id="tv-tab" data-bs-toggle="tab" href="#tv" role="tab" aria-controls="tv" aria-selected="false">TV</a>
+                    </li>
+                    <li class="nav-item" role="presentation">
+                        <a class="nav__link" id="movil-tab" data-bs-toggle="tab" href="#movil" role="tab" aria-controls="movil" aria-selected="false">MOVIL</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="card-body card__body">
+                <div class="tab-content" id="myTabContent">
+                    <div class="tab-pane fade active show" id="internet" role="tabpanel" aria-labelledby="internet-tab">
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime vero atque ad sapiente illo in corporis nobis harum eveniet eius debitis magnam neque impedit illum nisi consectetur alias, perferendis omnis.</p>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime vero atque ad sapiente illo in corporis nobis harum eveniet eius debitis magnam neque impedit illum nisi consectetur alias, perferendis omnis.</p>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime vero atque ad sapiente illo in corporis nobis harum eveniet eius debitis magnam neque impedit illum nisi consectetur alias, perferendis omnis.</p>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime vero atque ad sapiente illo in corporis nobis harum eveniet eius debitis magnam neque impedit illum nisi consectetur alias, perferendis omnis.</p>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime vero atque ad sapiente illo in corporis nobis harum eveniet eius debitis magnam neque impedit illum nisi consectetur alias, perferendis omnis.</p>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime vero atque ad sapiente illo in corporis nobis harum eveniet eius debitis magnam neque impedit illum nisi consectetur alias, perferendis omnis.</p>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime vero atque ad sapiente illo in corporis nobis harum eveniet eius debitis magnam neque impedit illum nisi consectetur alias, perferendis omnis.</p>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime vero atque ad sapiente illo in corporis nobis harum eveniet eius debitis magnam neque impedit illum nisi consectetur alias, perferendis omnis.</p>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime vero atque ad sapiente illo in corporis nobis harum eveniet eius debitis magnam neque impedit illum nisi consectetur alias, perferendis omnis.</p>
+                    </div>
+                    <div class="tab-pane fade" id="tv" role="tabpanel" aria-labelledby="tv-tab">
+                        fgdg
+                    </div>
+                    <div class="tab-pane fade" id="movil" role="tabpanel" aria-labelledby="movil-tab">
+                        iii
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!--<section class="navbarProd">
         <div class="navbarProd__nav">
             <nav class="navbar navbar-expand-lg navbar-light">
                 <div class="container-fluid">
@@ -261,7 +309,7 @@
                 </ul>
             </div> 
         </div>
-    </section>
+    </section>-->
 
     <footer class="footer">
         <div class="container pad-l-5 pad-r-5">
