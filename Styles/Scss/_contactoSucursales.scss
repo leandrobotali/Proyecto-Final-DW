@@ -1,0 +1,61 @@
+.contactoSucursales{
+    @include flex (column, center, center, nowrap);
+
+    .contactoSucursales__h2{
+        color: $colorPrimario;
+        text-align: center;
+        margin: 7rem auto;
+        padding: 1rem;
+        box-shadow: 0 10px 15px $colorBordes;
+        background-color: $colorSecundario;
+        width: 80%;
+    
+        @media (max-width: 576px){
+            font-size: 2rem;
+        }
+    }
+
+    .container{
+        @include flex (row, space-evenly, center, nowrap);        
+        background-color: $colorCuadro;
+        border-radius: 1rem;
+        border: 2px outset $colorBordes;
+        padding: 3rem 0 4rem 0;
+        box-shadow: 0 10px 15px $colorBordes;
+        width: 80%;
+        
+        @media (max-width: 768px){
+            flex-direction: column;
+        }
+
+        .contactoSucursales__Cuadro{
+            border: 2px outset $colorBordes;
+            margin: 2rem 0;
+            padding: 2rem;
+            border-radius: 1rem;
+            box-shadow: 0 10px 15px $colorBordes;
+
+
+            &:hover {
+                transform: scale(1.3);
+                background-color: $colorCuadro;
+            }
+
+            .cuadro__h3{
+                text-align: center;
+                margin: 1rem 0 2rem 0;
+                color: $colorPrimario;
+            }
+
+            .cuadro__iframe{
+                margin-bottom: 2rem;
+                box-shadow: 0 10px 15px $colorBordes;
+            }
+
+            .cuadro__text{
+                color: $colorPrimario;
+            }
+
+        }
+    }
+}

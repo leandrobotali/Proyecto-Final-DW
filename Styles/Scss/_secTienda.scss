@@ -1,0 +1,100 @@
+.secTienda{
+    @include flex(column,center,center,nowrap);
+    
+    .secTienda__h2{
+        color: $colorPrimario;
+        text-align: center;
+        margin: 7rem auto;
+        padding: 1rem;
+        box-shadow: 0 10px 15px $colorBordes;
+        background-color: $colorSecundario;
+        width: 80%;
+    
+        @media (max-width: 576px){
+            font-size: 2rem;
+        }
+    }
+    
+    .container{
+        width: 80%;
+        @include flex(row,center,center,nowrap);
+        background-color: $colorCuadro;
+        margin: 0rem auto 7rem auto;
+        border-radius: 10px;
+        border: 2px outset $colorBordes;
+        box-shadow: 0 15px 10px $colorBordes;
+
+        @media (max-width: 1400px){
+            flex-direction: column;
+        }
+
+        @media (max-width: 992px){
+            flex-direction: column;
+        }
+        .pag2sec__boton{
+            border: 2px outset $colorBordes;
+            background-color: $colorCuadro;
+            margin: 2rem;
+            box-shadow: 0 15px 10px $colorBordes;
+
+            &:hover{
+                transform: scale(1.2);
+            }
+
+            .pag2sec__botontexto{
+                text-align: left;
+                margin: 1rem;
+                
+                .pag2sec__botontextoColor1{
+                    color: black;
+                }
+
+                .pag2sec__botontextoColor2{
+                    color: $colorPrimario;
+                }
+
+                .pag2sec__botontextofondo{
+                    background-color: #7ed4f87e;
+                    display: inline;
+                    padding: 5px;
+                }
+            }
+
+        }
+
+        .pag2sec__modal{
+            background-color: #005c8354;
+            
+            .modal__fondo{
+                display: flex;
+                justify-content: center;
+                margin-top: 11rem;
+            }
+
+            .pag2sec__botontexto{
+                text-align: left;
+                background-color: white;
+                padding: 3rem;
+                
+                .pag2sec__botontextoColor1{
+                    color: black;
+                }
+
+                .pag2sec__botontextoColor2{
+                    color: $colorPrimario;
+                }
+
+                .pag2sec__botontextofondo{
+                    background-color: #7ed4f87e;
+                    display: inline;
+                    padding: 5px;
+                }
+
+                .pag2sec__botontextoEnlace{
+                    color:$colorPrimario;
+                }
+            }
+        }
+        
+    }
+}

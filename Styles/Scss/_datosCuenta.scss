@@ -1,0 +1,109 @@
+.datosCuenta{
+    margin: 5rem 0;
+    background-color: #f7f1ef;
+
+    .datosCuenta__h2{
+        color: $colorPrimario;
+        text-align: center;
+        margin: 7rem auto;
+        padding: 1rem;
+        box-shadow: 0 10px 15px $colorBordes;
+        background-color: $colorSecundario;
+        width: 80%;
+    
+        @media (max-width: 576px){
+            font-size: 2rem;
+        }
+    }
+
+    .datosCuenta__datos{
+        width: 70%;
+        padding: 1rem;
+        margin: 0 auto 3rem auto;
+
+        .datos__div1{
+            @include flex(row,space-evenly,center,nowrap);
+
+            @media (max-width: 768px){
+                flex-direction: column;
+            }
+
+            .datos__sub{
+                font-weight: 700;
+                text-decoration: underline;
+            }
+        }
+
+        .datos__div2{
+            margin-top: 5rem;
+            @include flex(row,center,center,nowrap);
+
+            @media (max-width: 768px){
+                flex-direction: column;
+            }
+
+            .datos__sub{
+                font-weight: 700;
+                text-decoration: underline;
+            }
+        }
+
+    }
+
+    .container{
+        border: 5px outset $colorSecundario;
+        padding: 0;
+        width: 70%;
+        box-shadow: 0 10px 15px $colorBordes;
+
+        .datosCuenta__item{
+            margin: 0;
+            .datosCuenta__h4{
+                border: 1px solid $colorPrimario;
+
+                .datosCuenta__boton{
+                    background-color: $colorSecundario;
+                    font-size: 2.5rem;
+                    color: $colorPrimario;
+                    text-align: center;
+                }
+            }
+
+            .datosCuenta__divCuerpo{
+                background-color: $colorSecundario;
+
+                .datosCuenta__cuerpo{
+                    text-align: center;
+
+                    .cuerpo__cuadro{
+                        @include flex(row,space-between,center,nowrap);                        
+
+                        @media (max-width: 768px){
+                            flex-direction: column;
+                        }
+                        
+                        .cuadro__int{
+                            margin:2rem;
+                            padding: 2rem;
+
+                            .cuadro__icono{
+                                font-size: 5rem;
+                                color: $colorPrimario;
+                                margin-bottom: 2rem;
+                            }
+
+                            .cuadro__textos{
+                                color: $colorPrimario
+                            }
+                        }
+                    }
+
+                    .datosCuenta__textos{
+                        color: $colorPrimario;
+                    }
+                }
+
+            }
+        }
+    }
+}

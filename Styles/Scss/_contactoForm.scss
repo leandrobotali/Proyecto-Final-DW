@@ -1,0 +1,89 @@
+.contactoForm{
+    @include flex (column, center, center, nowrap);
+
+    .contactoForm__h2{
+        color: $colorPrimario;
+        text-align: center;
+        margin: 7rem auto;
+        padding: 1rem;
+        box-shadow: 0 10px 15px $colorBordes;
+        background-color: $colorSecundario;
+        width: 80%;
+    
+        @media (max-width: 576px){
+            font-size: 2rem;
+        }
+    }
+
+    .container{
+        @include flex (column, center, center, nowrap);
+        width: 40%;
+        border: 2px outset $colorBordes;
+        background-color: $colorCuadro;
+        margin-bottom: 10rem;
+        padding: 3rem;
+        border-radius: 15px;
+        box-shadow: 0 10px 15px $colorBordes;
+
+        .contactoForm__form{
+            @include flex (column, center, center, nowrap);
+            width: 85%;
+
+            .form__fieldset{
+                border: 2px outset $colorBordes;
+                border-radius: 15px;
+                padding: 5rem;
+                margin:1rem;
+                box-shadow: 0 10px 15px $colorBordes;
+
+                .form__input{
+                    @include flex (column, center, center, nowrap);
+                    margin: 1rem;
+                    border-bottom: 5px solid $colorSecundario;
+
+                    .form__label{
+                        color: $colorPrimario;
+                        text-align: center;
+                    }
+
+                    .form__control{
+                        background-color: lighten($color: $colorSecundario, $amount: 10%);
+                        border-radius: 5px;
+                    }
+                }
+
+                .form__input--ancho{
+                    width: 70%;
+                    margin: auto;
+                }
+            }
+
+            .form__cuadroBoton{
+                @include flex (column, center, center, nowrap);
+                margin: 3rem;
+
+                .form__boton{
+                    border-color: $colorPrimario;
+                    color: $colorPrimario;
+                    width: 15rem;
+                    height: 5rem;
+                    font-size: 2rem;
+                    border-radius: 10px;
+                    box-shadow: 0 10px 15px $colorBordes;
+
+                    &:hover {
+                        background-color: $colorPrimario;
+                        color: $colorSecundario;
+                    }
+
+                    @media (max-width:768px){
+                        width: 10rem;
+                        height: 3rem;
+                        font-size: 1.5rem;
+                    }
+                }
+
+            }
+        }
+    }
+}

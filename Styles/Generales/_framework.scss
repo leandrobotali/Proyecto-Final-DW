@@ -1,0 +1,158 @@
+//MARGENES
+
+@for $i from 1 through 5 {
+
+    .margen-#{$i} {
+        margin: 10px * $i;
+    }
+}
+
+@for $i from 1 through 5 {
+
+    .margen-t-#{$i} {
+        margin-top: 10px * $i;
+    }
+}
+
+@for $i from 1 through 5 {
+
+    .margen-b-#{$i} {
+        margin-bottom: 10px * $i;
+    }
+}
+
+@for $i from 1 through 5 {
+
+    .margen-l-#{$i} {
+        margin-left: 10px * $i;
+    }
+}
+
+@for $i from 1 through 5 {
+
+    .margen-r-#{$i} {
+        margin-right: 10px * $i;
+    }
+}
+
+//PADDING
+
+@for $i from 1 through 5 {
+
+    .pad-#{$i} {
+        padding: 10px * $i;
+    }
+}
+
+@for $i from 1 through 5 {
+
+    .pad-t-#{$i} {
+        padding-top: 10px * $i;
+    }
+}
+
+@for $i from 1 through 5 {
+
+    .pad-b-#{$i} {
+        padding-bottom: 10px * $i;
+    }
+}
+
+@for $i from 1 through 5 {
+
+    .pad-l-#{$i} {
+        padding-left: 10px * $i;
+    }
+}
+
+@for $i from 1 through 5 {
+
+    .pad-r-#{$i} {
+        padding-right: 10px * $i;
+    }
+}
+
+//TAMAÑO TEXTO
+
+$sizes: 10, 20, 30, 40, 50, 100, 200;
+
+@each $size in $sizes {
+
+    .font-#{$size} {
+        font-size: #{$size}px;
+    }
+}
+
+//MAPAS
+
+//para redes
+
+$redes: (
+    facebook: #3a5795,
+    twitter: #55acee,
+    instagram:#8f2fb1,
+    email: #c43219,
+);
+
+@each $red, $color in $redes {
+    .enlace-#{$red} {
+        color: $color;
+    }
+}
+
+//MIXIN PARA FLEX
+
+@mixin flex($direccion, $justify, $align, $wrap) {
+    display: flex;
+    flex-direction: $direccion;
+    justify-content: $justify;
+    align-items: $align;
+    flex-wrap: $wrap;
+}
+
+//MIXIN PARA BOTONES
+
+$colores: (
+    azul: #0d6efd,
+    gris: #6c757d,
+    verde: #198754,
+    rojo: #dc3545,
+    amarillo: #ffc107,
+    celeste: #0dcaf0,
+    blanco: rgb(219, 219, 219),
+    negro: rgb(7, 7, 7),
+);
+
+@mixin boton($color, $rounded, $hover) {
+    padding: 10px 30px;
+    background-color: $color;
+
+    @if $rounded == true {
+        border-radius: 5px;
+    }
+
+    &:hover {
+        @if $hover == light {
+            background-color: lighten($color: $color, $amount: 15%);
+        } @else if $hover == dark {
+            background-color: darken($color: $color, $amount: 15%);
+        }
+    }
+}
+
+@each $color, $valor in $colores {
+    .boton-#{$color} {
+        @include boton($valor, false, light)
+    }
+    .boton-redondeado-#{$color}{
+        @include boton($valor, true, light)
+    }
+}
+@each $color, $valor in $colores {
+    .boton-#{$color}-dark {
+        @include boton($valor, false, dark)
+    }
+    .boton-redondeado-#{$color}-dark {
+        @include boton($valor, true, dark)
+    }
+}

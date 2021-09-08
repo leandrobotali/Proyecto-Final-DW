@@ -1,0 +1,45 @@
+.header{
+    @include flex(row, center, center, nowrap);
+    
+    
+    .container{
+        @include flex (column,center,center,nowrap);
+        padding: 0;
+
+        .header__divtitulo{
+            @include flex(row,center,center,nowrap);
+            background-color: $colorPrimario;
+            width:100%; 
+
+            .header__titulo{
+                color: $colorSecundario;
+                
+                .titulo__span{
+                    text-align: right;
+                    transform: translate(20px, -20px);
+                    
+                }
+            }
+        }
+        .header__divnav{
+            @include flex(row,center,center,nowrap);
+            background-color: $colorPrimario;
+            width:100%;
+
+            .nav__boton{
+                 background-color: $colorSecundario;   
+            }
+
+            .nav_enlace{
+                color:$colorSecundario;
+
+                &:hover {
+                    transform: scale(1.2);
+                    background-color: $colorPrimario;
+                    border-radius: 10px;
+                    color: lighten($color: $colorSecundario, $amount: 10%);
+                }
+            }
+        }
+    }
+}

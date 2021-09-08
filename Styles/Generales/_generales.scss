@@ -1,0 +1,49 @@
+//VARIABLES
+$colorPrimario:#005c83;
+$colorSecundario:#dfd2c9;
+
+$colorCuadro:rgb(228, 228, 228);
+$colorBordes:#b4c7cf;
+
+$fuenteTitulo: 'Bangers', cursive;
+$fueteParrafo:'Open Sans', sans-serif;
+
+
+
+
+//RESET
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html{
+    font-size: 62.5%;
+    scroll-behavior: smooth;
+}
+
+//AJUSTES GENERALES
+
+h1, h2, h3, h4, h5, h6{
+    font-family: $fuenteTitulo;
+}
+
+p, a, label,legend{
+    font-family: $fueteParrafo;
+    font-size: 1.5rem;
+}
+
+a{
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 2rem;
+}
+
+li{
+    list-style: none;
+}
+
+.container{
+    max-width: 100%;
+}

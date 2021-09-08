@@ -1,0 +1,31 @@
+.seccion404{
+    @include flex(column, center,center,nowrap);
+    height: 100vh;
+
+    .container{
+        @include flex(column, center,center,nowrap);
+        
+
+        .seccion404__h1{
+            color: $colorPrimario;
+        }
+
+        .seccion404__p{
+            color: $colorPrimario;
+        }
+
+        .seccion404__boton{
+            color: $colorPrimario;
+            border: 2px solid $colorPrimario;
+            border-radius: 5px;
+            
+            &:hover{
+                box-shadow: 0 10px 10px $colorPrimario;
+            }
+
+            .seccion404__enlace{
+                color: $colorPrimario;
+            }
+        }
+    }
+}

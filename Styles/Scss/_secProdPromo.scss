@@ -1,0 +1,86 @@
+.secProdPromo{
+    @include flex(row,center,center,nowrap);
+    background-color: #f7f1ef;
+
+    .secProdPromo__h2{
+        color: $colorPrimario;
+        text-align: center;
+        margin: 7rem auto;
+        padding: 1rem;
+        box-shadow: 0 10px 15px $colorBordes;
+        background-color: $colorSecundario;
+        width: 80%;
+    
+        @media (max-width: 576px){
+            font-size: 2rem;
+        }
+    }
+
+    .div__ul{
+        @include flex(row,center,center,nowrap);
+
+        .promociones__ul{
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            list-style: none;
+
+            @media (max-width: 768px){
+                flex-direction: column;
+            }
+
+            .divli__promociones{
+                background-color: lighten($color: $colorSecundario, $amount: 10%);
+                border-radius: 5px;
+                border-top: solid 5px;
+                padding-bottom: 5px;
+                border-top-color: $colorPrimario;
+                box-shadow: 0 15px 15px $colorBordes;
+
+                &:hover{
+                    transform: scale(1.2);
+                }
+
+                .promociones__precio{
+                    text-align: center;
+                    background-color: $colorSecundario;
+                    height: 10rem;
+
+                    .promo__tachado{
+                        text-decoration: line-through;
+                    }
+                }
+
+                .promo__icono{
+                    color:$colorPrimario;
+                }
+
+                .accordion-button:not(.collapsed){
+                    color:$colorBordes;
+                }
+                
+                .accordion-button{
+                    background-color: $colorBordes ;
+                }
+                
+                .accordion-item{
+                    background-color: lighten($color: $colorBordes, $amount: 10%);
+                }
+
+                .promociones__divboton{
+                    text-align: center;
+
+                    .promociones__boton{
+                        color:$colorPrimario;
+                        border: 1px solid $colorPrimario;
+
+                        &:hover{
+                            background-color: $colorPrimario;
+                            color: $colorSecundario;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

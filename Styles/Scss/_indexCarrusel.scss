@@ -1,0 +1,24 @@
+.indexCarrusel{
+    @include flex(row,center,center,nowrap);
+    background-color: #f7f1ef;
+
+    .h2__carrusel{
+        color: $colorPrimario;
+        text-align: center;
+        margin: 7rem auto;
+        padding: 1rem;
+        box-shadow: 0 10px 15px $colorBordes;
+        background-color: $colorSecundario;
+        width: 80%;
+    
+        @media (max-width: 576px){
+            font-size: 2rem;
+        }
+    }
+
+    .div__carrusel{
+        width:60%;
+        margin: 2rem auto;
+        box-shadow: 0 15px 10px $colorBordes;
+    }
+}
