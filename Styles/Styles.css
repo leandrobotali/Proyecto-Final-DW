@@ -634,18 +634,43 @@ li {
           align-items: center;
   -ms-flex-wrap: nowrap;
       flex-wrap: nowrap;
-  background-color: #005c83;
+  background-color: black;
+  width: 100%;
+}
+
+.header .container .header__divtitulo .header__logo {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+}
+
+.header .container .header__divtitulo .header__logo .logo__imagen {
   width: 100%;
 }
 
 .header .container .header__divtitulo .header__titulo {
-  color: #dfd2c9;
+  color: white;
+  -webkit-transform: translate(-35px, 50px);
+          transform: translate(-35px, 50px);
+  margin: 2rem;
 }
 
-.header .container .header__divtitulo .header__titulo .titulo__span {
-  text-align: right;
-  -webkit-transform: translate(20px, -20px);
-          transform: translate(20px, -20px);
+@media (max-width: 350px) {
+  .header .container .header__divtitulo .header__titulo {
+    display: none;
+  }
 }
 
 .header .container .header__divnav {
@@ -664,7 +689,7 @@ li {
           align-items: center;
   -ms-flex-wrap: nowrap;
       flex-wrap: nowrap;
-  background-color: #005c83;
+  background-color: black;
   width: 100%;
 }
 
@@ -673,15 +698,16 @@ li {
 }
 
 .header .container .header__divnav .nav_enlace {
-  color: #dfd2c9;
+  color: white;
+  border-bottom: 3px solid black;
 }
 
 .header .container .header__divnav .nav_enlace:hover {
   -webkit-transform: scale(1.2);
           transform: scale(1.2);
-  background-color: #005c83;
-  border-radius: 10px;
-  color: white;
+  background-color: black;
+  color: #05548e;
+  border-bottom: 3px solid #03375d;
 }
 
 .header .container .header__divnav .nav_enlace--dropdown {
@@ -691,12 +717,12 @@ li {
 .header .container .header__divnav .nav_enlace--dropdown:hover {
   -webkit-transform: scale(1.1);
           transform: scale(1.1);
-  background-color: #005c83;
+  background-color: black;
   color: white;
 }
 
 .header .container .header__divnav .dropdown-menu {
-  background-color: #005c83;
+  background-color: black;
   width: 250px;
   text-align: center;
 }
@@ -793,7 +819,7 @@ li {
 .footer .container .footer__logo {
   text-align: right;
   font-size: 5rem;
-  color: #005c83;
+  color: black;
   margin: 2rem 1rem 2rem 0;
   font-family: "Bangers", cursive;
 }
@@ -846,26 +872,14 @@ li {
   background-color: #f7f1ef;
 }
 
-.indexCarrusel .h2__carrusel {
-  color: #005c83;
-  text-align: center;
-  margin: 7rem auto;
-  padding: 1rem;
-  -webkit-box-shadow: 0 10px 15px #b4c7cf;
-          box-shadow: 0 10px 15px #b4c7cf;
-  background-color: #dfd2c9;
-  width: 80%;
+.indexCarrusel .container {
+  padding: 0;
 }
 
-@media (max-width: 576px) {
-  .indexCarrusel .h2__carrusel {
-    font-size: 2rem;
-  }
-}
-
-.indexCarrusel .div__carrusel {
-  width: 60%;
-  margin: 2rem auto;
+.indexCarrusel .container .div__carrusel {
+  width: 100%;
+  margin: 0;
+  padding: 0;
   -webkit-box-shadow: 0 15px 10px #b4c7cf;
           box-shadow: 0 15px 10px #b4c7cf;
 }
@@ -890,7 +904,7 @@ li {
 }
 
 .indexSecpromociones .h2__promociones {
-  color: #005c83;
+  color: black;
   text-align: center;
   margin: 7rem auto;
   padding: 1rem;
@@ -952,7 +966,7 @@ li {
   border-radius: 5px;
   border-top: solid 5px;
   padding-bottom: 5px;
-  border-top-color: #005c83;
+  border-top-color: black;
   -webkit-box-shadow: 0 15px 15px #b4c7cf;
           box-shadow: 0 15px 15px #b4c7cf;
 }
@@ -973,7 +987,7 @@ li {
 }
 
 .indexSecpromociones .div__ul .promociones__ul .divli__promociones .promo__icono {
-  color: #005c83;
+  color: black;
 }
 
 .indexSecpromociones .div__ul .promociones__ul .divli__promociones .accordion-button:not(.collapsed) {
@@ -993,12 +1007,12 @@ li {
 }
 
 .indexSecpromociones .div__ul .promociones__ul .divli__promociones .promociones__divboton .promociones__boton {
-  color: #005c83;
-  border: 1px solid #005c83;
+  color: black;
+  border: 1px solid black;
 }
 
 .indexSecpromociones .div__ul .promociones__ul .divli__promociones .promociones__divboton .promociones__boton:hover {
-  background-color: #005c83;
+  background-color: black;
   color: #dfd2c9;
 }
 
@@ -1021,7 +1035,7 @@ li {
 }
 
 .secTienda .secTienda__h2 {
-  color: #005c83;
+  color: black;
   text-align: center;
   margin: 7rem auto;
   padding: 1rem;
@@ -1103,7 +1117,7 @@ li {
 }
 
 .secTienda .container .pag2sec__boton .pag2sec__botontexto .pag2sec__botontextoColor2 {
-  color: #005c83;
+  color: black;
 }
 
 .secTienda .container .pag2sec__boton .pag2sec__botontexto .pag2sec__botontextofondo {
@@ -1137,7 +1151,7 @@ li {
 }
 
 .secTienda .container .pag2sec__modal .pag2sec__botontexto .pag2sec__botontextoColor2 {
-  color: #005c83;
+  color: black;
 }
 
 .secTienda .container .pag2sec__modal .pag2sec__botontexto .pag2sec__botontextofondo {
@@ -1147,7 +1161,7 @@ li {
 }
 
 .secTienda .container .pag2sec__modal .pag2sec__botontexto .pag2sec__botontextoEnlace {
-  color: #005c83;
+  color: black;
 }
 
 .contactoSucursales {
@@ -1169,7 +1183,7 @@ li {
 }
 
 .contactoSucursales .contactoSucursales__h2 {
-  color: #005c83;
+  color: black;
   text-align: center;
   margin: 7rem auto;
   padding: 1rem;
@@ -1226,6 +1240,7 @@ li {
   border-radius: 1rem;
   -webkit-box-shadow: 0 10px 15px #b4c7cf;
           box-shadow: 0 10px 15px #b4c7cf;
+  width: 30%;
 }
 
 .contactoSucursales .container .contactoSucursales__Cuadro:hover {
@@ -1237,7 +1252,7 @@ li {
 .contactoSucursales .container .contactoSucursales__Cuadro .cuadro__h3 {
   text-align: center;
   margin: 1rem 0 2rem 0;
-  color: #005c83;
+  color: black;
 }
 
 .contactoSucursales .container .contactoSucursales__Cuadro .cuadro__iframe {
@@ -1247,7 +1262,7 @@ li {
 }
 
 .contactoSucursales .container .contactoSucursales__Cuadro .cuadro__text {
-  color: #005c83;
+  color: black;
 }
 
 .contactoForm {
@@ -1269,7 +1284,7 @@ li {
 }
 
 .contactoForm .contactoForm__h2 {
-  color: #005c83;
+  color: black;
   text-align: center;
   margin: 7rem auto;
   padding: 1rem;
@@ -1360,7 +1375,7 @@ li {
 }
 
 .contactoForm .container .contactoForm__form .form__fieldset .form__input .form__label {
-  color: #005c83;
+  color: black;
   text-align: center;
 }
 
@@ -1394,8 +1409,8 @@ li {
 }
 
 .contactoForm .container .contactoForm__form .form__cuadroBoton .form__boton {
-  border-color: #005c83;
-  color: #005c83;
+  border-color: black;
+  color: black;
   width: 15rem;
   height: 5rem;
   font-size: 2rem;
@@ -1405,7 +1420,7 @@ li {
 }
 
 .contactoForm .container .contactoForm__form .form__cuadroBoton .form__boton:hover {
-  background-color: #005c83;
+  background-color: black;
   color: #dfd2c9;
 }
 
@@ -1436,7 +1451,7 @@ li {
 }
 
 .cuentaForm .cuentaForm__h2 {
-  color: #005c83;
+  color: black;
   text-align: center;
   margin: 7rem auto;
   padding: 1rem;
@@ -1527,7 +1542,7 @@ li {
 }
 
 .cuentaForm .container .cuentaForm__form .form__fieldset .form__input .form__label {
-  color: #005c83;
+  color: black;
   text-align: center;
 }
 
@@ -1547,13 +1562,13 @@ li {
 }
 
 .cuentaForm .container .cuentaForm__form .form__cuadroIngreso .form__enlace {
-  color: #005c83;
+  color: black;
   padding: 1rem;
   border-radius: 5px;
 }
 
 .cuentaForm .container .cuentaForm__form .form__cuadroIngreso .form__enlace:hover {
-  background-color: #005c83;
+  background-color: black;
   color: #dfd2c9;
 }
 
@@ -1569,7 +1584,7 @@ li {
 }
 
 .datosCuenta .datosCuenta__h2 {
-  color: #005c83;
+  color: black;
   text-align: center;
   margin: 7rem auto;
   padding: 1rem;
@@ -1669,13 +1684,13 @@ li {
 }
 
 .datosCuenta .container .datosCuenta__item .datosCuenta__h4 {
-  border: 1px solid #005c83;
+  border: 1px solid black;
 }
 
 .datosCuenta .container .datosCuenta__item .datosCuenta__h4 .datosCuenta__boton {
   background-color: #dfd2c9;
   font-size: 2.5rem;
-  color: #005c83;
+  color: black;
   text-align: center;
 }
 
@@ -1721,16 +1736,16 @@ li {
 
 .datosCuenta .container .datosCuenta__item .datosCuenta__divCuerpo .datosCuenta__cuerpo .cuerpo__cuadro .cuadro__int .cuadro__icono {
   font-size: 5rem;
-  color: #005c83;
+  color: black;
   margin-bottom: 2rem;
 }
 
 .datosCuenta .container .datosCuenta__item .datosCuenta__divCuerpo .datosCuenta__cuerpo .cuerpo__cuadro .cuadro__int .cuadro__textos {
-  color: #005c83;
+  color: black;
 }
 
 .datosCuenta .container .datosCuenta__item .datosCuenta__divCuerpo .datosCuenta__cuerpo .datosCuenta__textos {
-  color: #005c83;
+  color: black;
 }
 
 .seccion404 {
@@ -1771,26 +1786,26 @@ li {
 }
 
 .seccion404 .container .seccion404__h1 {
-  color: #005c83;
+  color: black;
 }
 
 .seccion404 .container .seccion404__p {
-  color: #005c83;
+  color: black;
 }
 
 .seccion404 .container .seccion404__boton {
-  color: #005c83;
-  border: 2px solid #005c83;
+  color: black;
+  border: 2px solid black;
   border-radius: 5px;
 }
 
 .seccion404 .container .seccion404__boton:hover {
-  -webkit-box-shadow: 0 10px 10px #005c83;
-          box-shadow: 0 10px 10px #005c83;
+  -webkit-box-shadow: 0 10px 10px black;
+          box-shadow: 0 10px 10px black;
 }
 
 .seccion404 .container .seccion404__boton .seccion404__enlace {
-  color: #005c83;
+  color: black;
 }
 
 .secProdnav {
@@ -1863,11 +1878,11 @@ li {
 }
 
 .secProdnav .container .secProdnav__nav .secProdnav__ul .nav-item .nav__link {
-  color: #005c83;
+  color: black;
   padding: 0;
 }
 
 .secProdnav .container .secProdnav__nav .secProdnav__ul .nav-item .nav__link:hover {
-  color: #0080b6;
+  color: #1a1a1a;
 }
 /*# sourceMappingURL=Styles.css.map */

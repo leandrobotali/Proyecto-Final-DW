@@ -1,23 +1,30 @@
 .header{
     @include flex(row, center, center, nowrap);
     
-    
     .container{
         @include flex (column,center,center,nowrap);
-        padding: 0;
+        padding: 0;        
 
         .header__divtitulo{
             @include flex(row,center,center,nowrap);
-            background-color: $colorPrimario;
-            width:100%; 
+            background-color: black;
+            width:100%;
+
+            .header__logo{
+                @include flex(row,center,center,nowrap);
+
+                .logo__imagen{
+                    width: 100%;
+                }
+            }
 
             .header__titulo{
-                color: $colorSecundario;
-                
-                .titulo__span{
-                    text-align: right;
-                    transform: translate(20px, -20px);
-                    
+                color: white;
+                transform: translate(-35px, 50px);
+                margin: 2rem;
+
+                @media (max-width: 350px){
+                   display: none;
                 }
             }
         }
@@ -31,13 +38,14 @@
             }
 
             .nav_enlace{
-                color:$colorSecundario;
+                color:white;
+                border-bottom: 3px solid $colorPrimario;
 
                 &:hover {
                     transform: scale(1.2);
                     background-color: $colorPrimario;
-                    border-radius: 10px;
-                    color: lighten($color: $colorSecundario, $amount: 20%);
+                    color: lighten($color: $colorSub, $amount: 10%);
+                    border-bottom: 3px solid $colorSub;
                 }
 
             }
