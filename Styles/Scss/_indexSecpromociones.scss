@@ -1,86 +1,95 @@
 .indexSecpromociones{
     @include flex(row,center,center,nowrap);
-    background-color: #f7f1ef;
+    background: rgb(223,210,201);
+    background: radial-gradient(circle, rgba(223,210,201,1) 64%, rgba(78,115,141,1) 97%, rgba(2,65,110,1) 100%);
 
-    .h2__promociones{
-        color: $colorPrimario;
-        text-align: center;
-        margin: 7rem auto;
-        padding: 1rem;
-        box-shadow: 0 10px 15px $colorBordes;
-        background-color: $colorSecundario;
-        width: 80%;
-    
-        @media (max-width: 576px){
-            font-size: 2rem;
+
+    .container{
+        padding: 0;
+
+        @media (max-width: 768px){
+            width: 100%;
         }
-    }
-
-    .div__ul{
-        @include flex(row,center,center,nowrap);
-
-        .promociones__ul{
-            display: flex;
-            flex-direction: row;
-            justify-content: center;
-            list-style: none;
-
-            @media (max-width: 768px){
-                flex-direction: column;
+        
+            .h2__promociones{
+                color: $colorPrimario;
+                text-align: center;
+                margin-bottom: 7rem;
+                padding: 4rem;
+                box-shadow: 0 10px 15px $colorBordes;
+                width: 100%;
+            
+                @media (max-width: 576px){
+                    font-size: 2rem;
+                }
             }
-
-            .divli__promociones{
-                background-color: lighten($color: $colorSecundario, $amount: 10%);
-                border-radius: 5px;
-                border-top: solid 5px;
-                padding-bottom: 5px;
-                border-top-color: $colorPrimario;
-                box-shadow: 0 15px 15px $colorBordes;
-
-                &:hover{
-                    transform: scale(1.2);
-                }
-
-                .promociones__precio{
-                    text-align: center;
-                    background-color: $colorSecundario;
-                    height: 10rem;
-
-                    .pormo__tachado{
-                        text-decoration: line-through;
+        
+            .div__ul{
+                @include flex(row,center,center,nowrap);
+        
+                .promociones__ul{
+                    display: flex;
+                    flex-direction: row;
+                    justify-content: center;
+                    list-style: none;
+        
+                    @media (max-width: 768px){
+                        flex-direction: column;
                     }
-                }
-
-                .promo__icono{
-                    color:$colorPrimario;
-                }
-
-                .accordion-button:not(.collapsed){
-                    color:$colorBordes;
-                }
-                
-                .accordion-button{
-                    background-color: $colorBordes ;
-                }
-                
-                .accordion-item{
-                    background-color: lighten($color: $colorBordes, $amount: 10%);
-                }
-
-                .promociones__divboton{
-                    text-align: center;
-
-                    .promociones__boton{
-                        color:$colorPrimario;
-                        border: 1px solid $colorPrimario;
-
+        
+                    .divli__promociones{
+                        background-color: lighten($color: $colorSecundario, $amount: 10%);
+                        border-radius: 5px;
+                        border-top: solid 5px;
+                        padding-bottom: 5px;
+                        border-top-color: $colorPrimario;
+                        box-shadow: 0 15px 15px $colorBordes;
+        
                         &:hover{
-                            background-color: $colorPrimario;
-                            color: $colorSecundario;
+                            transform: scale(1.1);
+                        }
+        
+                        .promociones__precio{
+                            text-align: center;
+                            background-color: $colorSecundario;
+                            height: 10rem;
+        
+                            .pormo__tachado{
+                                text-decoration: line-through;
+                            }
+                        }
+        
+                        .promo__icono{
+                            color:$colorPrimario;
+                        }
+        
+                        .accordion-button:not(.collapsed){
+                            color:$colorBordes;
+                        }
+                        
+                        .accordion-button{
+                            background-color: $colorBordes ;
+                        }
+                        
+                        .accordion-item{
+                            background-color: lighten($color: $colorBordes, $amount: 10%);
+                        }
+        
+                        .promociones__divboton{
+                            text-align: center;
+        
+                            .promociones__boton{
+                                color:$colorPrimario;
+                                border: 1px solid $colorPrimario;
+        
+                                &:hover{
+                                    background-color: $colorPrimario;
+                                    color: $colorSecundario;
+                                }
+                            }
                         }
                     }
                 }
             }
-        }
     }
 }

@@ -1,0 +1,28 @@
+.contacto__telefonos{
+    @include flex (column, center, center, nowrap);
+    background: rgb(223,210,201);
+    background: radial-gradient(circle, #dfd2c9 64%, #4e738d 97%, #02416e 100%);
+    box-shadow: 0 -10px 15px $colorBordes;
+
+    .contactotelefono__h2{
+        color: $colorPrimario;
+        text-align: center;
+        margin-bottom: 7rem;
+        padding: 4rem;
+        box-shadow: 0 10px 15px $colorBordes;
+        width: 100%;
+    
+        @media (max-width: 576px){
+            font-size: 2rem;
+        }
+    }
+
+    .contacto__telefono{
+        @include flex (column, center, center, nowrap);
+
+        .telefono__icono{
+            @include flex (column, center, center, nowrap);
+        }
+    }
+
+}

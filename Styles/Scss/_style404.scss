@@ -1,6 +1,8 @@
 .seccion404{
     @include flex(column, center,center,nowrap);
-    height: 100vh;
+    height: 80vh;
+    background: rgb(223,210,201);
+    background: radial-gradient(circle, rgba(223,210,201,1) 64%, rgba(78,115,141,1) 97%, rgba(2,65,110,1) 100%);
 
     .container{
         @include flex(column, center,center,nowrap);
@@ -21,6 +23,7 @@
             
             &:hover{
                 box-shadow: 0 10px 10px $colorPrimario;
+                background-color: $colorSecundario;
             }
 
             .seccion404__enlace{

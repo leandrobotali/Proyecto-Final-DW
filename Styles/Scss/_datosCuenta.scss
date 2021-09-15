@@ -1,16 +1,16 @@
 .datosCuenta{
-    margin: 5rem 0;
     background-color: #f7f1ef;
+    background: rgb(223,210,201);
+    background: radial-gradient(circle, rgba(223,210,201,1) 64%, rgba(78,115,141,1) 97%, rgba(2,65,110,1) 100%);
 
-    .datosCuenta__h2{
+    .datosCuenta__h1{
         color: $colorPrimario;
         text-align: center;
-        margin: 7rem auto;
-        padding: 1rem;
+        margin-bottom: 7rem;
+        padding: 4rem;
         box-shadow: 0 10px 15px $colorBordes;
-        background-color: $colorSecundario;
-        width: 80%;
-    
+        width: 100%;
+        
         @media (max-width: 576px){
             font-size: 2rem;
         }
@@ -51,59 +51,176 @@
     }
 
     .container{
-        border: 5px outset $colorSecundario;
-        padding: 0;
+        padding-bottom: 10rem;
         width: 70%;
-        box-shadow: 0 10px 15px $colorBordes;
 
-        .datosCuenta__item{
-            margin: 0;
-            .datosCuenta__h4{
-                border: 1px solid $colorPrimario;
+        @media (max-width: 550px){
+            width: 90%;
+        }
 
-                .datosCuenta__boton{
-                    background-color: $colorSecundario;
-                    font-size: 2.5rem;
+        .secdatos__nav{
+            @include flex(row,center,center,nowrap);
+            padding: 4rem;
+            box-shadow: 0 10px 15px $colorBordes;
+
+            @media (max-width: 550px){
+                padding: 4rem 0;
+            }
+
+            .secdatos__ul{
+                @include flex(row,space-between,center,nowrap);                
+                width: 90%;
+
+                @media (max-width: 550px){
+                    flex-direction: column;
+                    width: 100%;
+                }
+
+                .nav-item{
+                    margin: 0;
+                    padding: 0;
+
+                    .nav__link{
+                        color: $colorPrimario;
+                        padding: 0;
+
+                        @media (max-width: 850px){
+                            font-size: 1.5rem;
+                        }
+                        @media (max-width: 680px){
+                            font-size: 1rem;
+                        }
+                        @media (max-width: 550px){
+                            margin-top: 2rem;
+                        }
+                       
+                        &:hover{
+                            color: lighten($color: $colorPrimario, $amount: 30%);
+                            text-decoration: underline;
+                        }
+                    }
+
+                }
+            }
+        }
+
+        .row{
+            justify-content: center;
+
+            .cuadro__intconsumo{
+                @include flex(column,center,center,nowrap);
+                margin: 2rem;
+
+                .cuadro__icono{
+                    font-size: 5rem;
                     color: $colorPrimario;
-                    text-align: center;
+                    margin: 5rem auto;
+                }
+
+                .cuadro__texto{
+                    @include flex(column,center,center,nowrap);
+                }
+
+            }
+
+            .h2__detalles{
+                text-align: center;
+                margin: 5rem 0;
+            }
+            
+            .detallesplan{
+                text-align: left;
+
+                .detalles__text{
+                    font-size: 2rem;
+                    
+                    @media (max-width: 800px){
+                        font-size: 1rem;
+                    }
+                }
+
+                .detalles__text--20{
+                    font-size: 3rem;
+                    
+                    @media (max-width: 850px){
+                        font-size: 2rem;
+                    }
                 }
             }
 
-            .datosCuenta__divCuerpo{
-                background-color: $colorSecundario;
+            .precioplan{
+                text-align: right;
 
-                .datosCuenta__cuerpo{
+                .detalles__text{
+                    font-size: 2rem;
+                    
+                    @media (max-width: 850px){
+                        font-size: 1rem;
+                    }
+                }
+
+                .detalles__text--20{
+                    font-size: 3rem;
+                    
+                    @media (max-width: 800px){
+                        font-size: 2rem;
+                    }
+                }
+            }
+
+            .mejorar__cuadro{
+                border: 2px solid $colorBordes;
+                background-color: $colorSecundario;
+                margin: 2rem;
+                padding: 3rem;
+                box-shadow: 0 10px 15px $colorBordes;
+
+                .mejorar__text--40{
+                    font-size: 4rem;
+                    text-align: center;
+                    
+                    @media (max-width: 850px){
+                        font-size: 2rem;
+                    }
+                }
+
+                .mejorar__text{
+                    font-size: 2rem;                    
+                    
+                    @media (max-width: 850px){
+                        font-size: 1rem;
+                    }
+                }
+
+                .mejorar__color{
+                    color: $colorSub;
+                }
+
+                .boton{
                     text-align: center;
 
-                    .cuerpo__cuadro{
-                        @include flex(row,space-between,center,nowrap);                        
-
-                        @media (max-width: 768px){
-                            flex-direction: column;
+                    .mejorar__boton{
+                        width: 10rem;
+                        height: 5rem;
+                        border:darken($color: $colorSecundario, $amount: 30%);
+                        color: $colorPrimario;
+                        border-radius: 5px;
+                        margin: 4rem auto 4rem auto;
+                        box-shadow: 0 10px 15px $colorBordes;
+    
+                        @media (max-width: 400px){
+                            width: 5rem;
+                            height: 2rem;
                         }
                         
-                        .cuadro__int{
-                            margin:2rem;
-                            padding: 2rem;
-
-                            .cuadro__icono{
-                                font-size: 5rem;
-                                color: $colorPrimario;
-                                margin-bottom: 2rem;
-                            }
-
-                            .cuadro__textos{
-                                color: $colorPrimario
-                            }
+                        &:hover{
+                            background-color:darken($color: $colorSecundario, $amount: 30%);
+                            color: lighten($color: $colorSecundario, $amount: 20%);
                         }
                     }
-
-                    .datosCuenta__textos{
-                        color: $colorPrimario;
-                    }
                 }
-
             }
+
         }
     }
 }

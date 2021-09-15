@@ -10,7 +10,7 @@
     <meta type="keywords" content="Internet, wifi, cable, fbra optica, pack futbol, tv hd, tv clasico, promocines, descuentos, telefonia, celulares nuevos">
     <!--graph protocol-->
     <meta property= "og:title" content="UMSA Tecnology - El mejor servicio de telecomunicaciones">
-    <meta property ="og:image" content="img/miniatura.jpg">
+    <meta property ="og:image" content="./img/miniatura.jpg">
     <meta property="og:description" content="somos la empresa lider de servicios de telefonia movil, tv por cable e internet de alta velocidad de argentina. Disfruta del mejor contenido donde, cuando y como quieras.">
     <meta property="og:url" content="http://UMSAtecnology.com.ar">
     <!--animaciones-->
@@ -32,12 +32,7 @@
     <header class="header">
         <div class="container">
             <div class="header__divtitulo">
-                <div class="header__logo">
-                    <img src="./img/logo__achicada.png" alt="logo cel" class="logo__imagen">
-                </div>
-                <h1 class="header__titulo margen-2 font-20">
-                        Tecnology
-                </h1>
+                <img src="./img/logo.jpg" alt="logo UMSA" class="header__imagen">
             </div>
             <div class="header__divnav">
                 <nav class="navbar navbar-expand-lg navbar-light">
@@ -46,7 +41,7 @@
                             <span class="navbar-toggler-icon"></span>
                         </button>
                         <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                            <ul class="navbar-nav">
+                            <ul class="navbar-nav  margen-2">
                                 <li class="nav-item margen-r-3">
                                     <a class="nav_enlace nav-link" href="./index.html">Inicio</a>
                                 </li>                                
@@ -82,7 +77,7 @@
     <section class="indexCarrusel">
         <div class="container">
             <div class="div__carrusel">
-                <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+                <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">                    
                     <div class="carousel-indicators">
                       <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
                       <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
@@ -90,13 +85,28 @@
                     </div>
                     <div class="carousel-inner">
                         <div class="carousel-item active" data-bs-interval="3000">
-                            <img src="./img/Samsung-car.jpg" class="d-block w-100 m-auto" alt="Ultimo lanzamiento de celular samsung" loading="lazy">
+                            <img src="./img/telecomunicaciones1.jpg" class="d-block w-100 m-auto" alt="UMSA el futuro de las telecomunicaciones" loading="lazy">
+                            <div class="carousel-caption d-none d-md-block carrusel__titulo">
+                                <h1 class="font-50 margen-l-2">UMSA
+                                    <span class="font-10">
+                                        Tecnology
+                                    </span>
+                                </h1>
+                                <p class="margen-b-2 font-20">El futúro de las telecomunicaciones</p>
+                            </div>
                         </div>
                         <div class="carousel-item" data-bs-interval="3000">
-                            <img src="./img/har-car.jpg" class="d-block w-100 m-auto" alt="Celular con la mejor camara del mercado" loading="lazy">
+                            <img src="./img//telecomunicaciones2.jpg" class="d-block w-100 m-auto" alt="banda ancha y contenido exclusivo" loading="lazy">
+                            <div class="carousel-caption d-none d-md-block carrusel__titulo">
+                                <p class="margen-b-2 font-20">La banda ancha mas rapida del pais</p>
+                                <p class="margen-b-2 margen-l-5 font-20">Contenidos exclusivos las 24hs</p>
+                            </div>
                         </div>
                         <div class="carousel-item" data-bs-interval="3000">
-                            <img src="./img/GALAXYS9_900-car.jpg.crdownload" class="d-block w-100 m-auto" alt="Lanzamiento de celular galaxy s9" loading="lazy">
+                            <img src="./img/telecomunicaciones3.jpg" class="d-block w-100 m-auto" alt="red movil 5g" loading="lazy">
+                            <div class="carousel-caption d-none d-md-block carrusel__titulo">
+                                <p class="margen-b-2 font-20">RED MOVIL 5G en todos lados</p>
+                            </div>
                         </div>
                     </div>
                     <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
@@ -269,10 +279,23 @@
     <footer class="footer">
         <a href="https://www.whatsapp.com/" class="wps font-50 animate__animated animate__bounceInDown animate__delay-1s" target="_blank"><i class="fab fa-whatsapp"></i></a>       
         <div class="container pad-l-5 pad-r-5">
-            <div class="footer__redes">
-                <a class="footer__link enlace-facebook" href="https://www.facebook.com/" target="_blank"><i class="fab fa-facebook"></i></a>
-                <a class="footer__link enlace-twitter" href="https://twitter.com/" target="_blank"><i class="fab fa-twitter-square"></i></a>
-                <a class="footer__link enlace-instagram" href="https://www.instagram.com/" target="_blank"><i class="fab fa-instagram-square"></i></a>
+            <div class="footer__div">
+                <div class="footer__redes">
+                    <a class="footer__link enlace-facebook" href="https://www.facebook.com/" target="_blank"><i class="fab fa-facebook"></i></a>
+                    <a class="footer__link enlace-twitter" href="https://twitter.com/" target="_blank"><i class="fab fa-twitter-square"></i></a>
+                    <a class="footer__link enlace-instagram" href="https://www.instagram.com/" target="_blank"><i class="fab fa-instagram-square"></i></a>
+                </div>
+                <div class="footer__telefono">
+                    <a href="./contacto.html" class="telefono__enlace">Contacto</a>
+                    <div class="telefono__icono">
+                        <i class="fas fa-phone-alt font-20"></i>
+                        <div class="margen-l-2">
+                            <p>7777-4444</p>
+                            <p>8888-5555</p>
+                            <p>9999-6666</p>
+                        </div>
+                    </div>
+                </div>
             </div>
             <p class="footer__logo">UMSA
                 <span class="footer__span font-10">

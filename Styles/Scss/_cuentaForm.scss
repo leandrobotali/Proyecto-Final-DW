@@ -1,14 +1,15 @@
 .cuentaForm{
     @include flex (column, center, center, nowrap);
+    background: rgb(223,210,201);
+    background: radial-gradient(circle, #dfd2c9 64%, #4e738d 97%, #02416e 100%);
 
-    .cuentaForm__h2{
+    .cuentaForm__h1{
         color: $colorPrimario;
         text-align: center;
-        margin: 7rem auto;
-        padding: 1rem;
+        margin-bottom: 7rem;
+        padding: 4rem;
         box-shadow: 0 10px 15px $colorBordes;
-        background-color: $colorSecundario;
-        width: 80%;
+        width: 100%;
     
         @media (max-width: 576px){
             font-size: 2rem;
@@ -18,23 +19,48 @@
     .container{
         @include flex (column, center, center, nowrap);
         width: 40%;
-        border: 2px outset $colorBordes;
-        background-color: $colorCuadro;
         margin-bottom: 10rem;
         padding: 3rem;
-        border-radius: 15px;
-        box-shadow: 0 10px 15px $colorBordes;
+        
+        @media (max-width:968px){
+            width: 60%;
+        }
+        @media (max-width:768px){
+            width: 70%;
+        }
+        @media (max-width:576px){
+            width: 80%;
+        }
+        @media (max-width:400px){
+            width: 90%;
+        }
+        @media (max-width:300px){
+            width: 100%;
+        }
 
         .cuentaForm__form{
             @include flex (column, center, center, nowrap);
             width: 85%;
 
+            @media (max-width:576px){
+                width: 90%;
+            }
+            @media (max-width:400px){
+                width: 100%;
+            }
+
             .form__fieldset{
                 border: 2px outset $colorBordes;
-                border-radius: 15px;
                 padding: 5rem;
                 margin: 1rem;
                 box-shadow: 0 10px 15px $colorBordes;
+                
+                @media (max-width:576px){
+                    padding: 1rem;
+                }
+                @media (max-width:400px){
+                    padding: 1rem;
+                }
 
                 .form__input{
                     @include flex (column, center, center, nowrap);
@@ -47,8 +73,16 @@
                     }
 
                     .form__control{
-                        background-color: lighten($color: $colorSecundario, $amount: 10%);
-                        border-radius: 5px;
+                        border:1px solid #a39083;
+                        background-color: $colorSecundario;
+                        box-shadow: 0 5px 15px $colorBordes;
+
+                        @media (max-width:576px){
+                            width: 90%;
+                        }
+                        @media (max-width:400px){
+                            width: 100%;
+                        }
                     }
                 }
             }
@@ -64,8 +98,8 @@
                     border-radius: 5px;
 
                     &:hover {
-                        background-color: $colorPrimario;
-                        color: $colorSecundario;
+                        background-color: darken($color: $colorSecundario, $amount: 30%);
+                        color: lighten($color: $colorSecundario, $amount: 20%)
                     }
 
                     @media (max-width:768px){

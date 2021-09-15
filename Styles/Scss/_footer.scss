@@ -1,6 +1,7 @@
 .footer{
     background-color: $colorSecundario;
     @include flex(row,space-between,center,nowrap);
+    box-shadow: 0 -10px 15px $colorBordes;
 
     .wps{
         @include flex(row,center,center,nowrap);
@@ -23,19 +24,43 @@
             color:rgb(0, 252, 0);
             box-shadow: 0 5px 10px green;
         }
+
+        @media (max-width: 576px){
+            display: none;
+        }
     }
 
     .container{
         @include flex(row,space-between,center,nowrap);
         margin: 3rem auto;
 
-        .footer__redes{
-            display: flex;
+        .footer__div{
+            @include flex(row,space-between,center,nowrap);            
             
-            .footer__link{
+            .footer__telefono{
+                @include flex(column,center,center,nowrap);
+                margin-left: 10rem;
+
+                .telefono__enlace{
+                    color: black;
+                    font-size: 20px;
+                    margin-bottom: 1rem;
+                    border-bottom: 2px solid black;
+                }
+
+                .telefono__icono{
+                    @include flex(row,center,center,nowrap);
+                }
+            }
+
+            .footer__redes{
                 display: flex;
-                font-size: 3rem;
-                margin: 0.5rem;
+                
+                .footer__link{
+                    display: flex;
+                    font-size: 3rem;
+                    margin: 0.5rem;
+                }
             }
         }
 
@@ -54,25 +79,29 @@
             }
         }
 
+
     }
 
 }
 
-
-@media (max-width: 768px){
-    .footer{
-        background-color: $colorCuadro;
-    }
-}
 
 @media (max-width: 576px){
     .footer{
         .container{
             flex-direction: column;
 
-            .footer__redes{
+            .footer__div{
                 flex-direction: column;
-            }
+
+                .footer__telefono{
+                    margin-left: 0;
+                }
+                
+                .footer__redes{
+                    flex-direction: column;
+                }
+            }   
+
         }
     }
 }

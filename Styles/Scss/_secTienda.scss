@@ -1,66 +1,97 @@
 .secTienda{
     @include flex(column,center,center,nowrap);
+    background: rgb(223,210,201);
+    background: radial-gradient(circle, rgba(223,210,201,1) 64%, rgba(78,115,141,1) 97%, rgba(2,65,110,1) 100%);
     
-    .secTienda__h2{
+    .secTienda__h1{
         color: $colorPrimario;
         text-align: center;
-        margin: 7rem auto;
-        padding: 1rem;
+        margin-bottom: 7rem;
+        padding: 4rem;
         box-shadow: 0 10px 15px $colorBordes;
-        background-color: $colorSecundario;
-        width: 80%;
-    
+        width: 100%;
+        
         @media (max-width: 576px){
             font-size: 2rem;
         }
-    }
+    }   
     
     .container{
         width: 80%;
         @include flex(row,center,center,nowrap);
-        background-color: $colorCuadro;
         margin: 0rem auto 7rem auto;
-        border-radius: 10px;
-        border: 2px outset $colorBordes;
-        box-shadow: 0 15px 10px $colorBordes;
 
-        @media (max-width: 1400px){
+        @media (max-width: 950px){
             flex-direction: column;
         }
-
-        @media (max-width: 992px){
-            flex-direction: column;
+        @media (max-width: 570px){
+            width: 90%;
         }
-        .pag2sec__boton{
-            border: 2px outset $colorBordes;
-            background-color: $colorCuadro;
-            margin: 2rem;
-            box-shadow: 0 15px 10px $colorBordes;
+        @media (max-width: 300px){
+            width: 100%;
+        }
 
-            &:hover{
-                transform: scale(1.2);
+        .container__columna{
+            @include flex(row,center,center,nowrap);
+            margin:0;
+            width:100%;
+
+            @media (max-width: 570px){
+                flex-direction: column;
             }
 
-            .pag2sec__botontexto{
-                text-align: left;
-                margin: 1rem;
-                
-                .pag2sec__botontextoColor1{
-                    color: black;
+            .pag2sec__boton{
+                @include flex(column,center,center,nowrap);
+                border: 2px outset $colorBordes;
+                background-color: $colorSecundario;
+                margin: 2rem;
+                box-shadow: 0 15px 10px $colorBordes;
+                width: 50%;
+    
+                @media (max-width: 950px){
+                    width: 40%;
                 }
-
-                .pag2sec__botontextoColor2{
-                    color: $colorPrimario;
+                @media (max-width: 570px){
+                    width: 60%;
                 }
-
-                .pag2sec__botontextofondo{
-                    background-color: #7ed4f87e;
-                    display: inline;
-                    padding: 5px;
+                @media (max-width: 370px){
+                    width: 80%;
                 }
+                @media (max-width: 300px){
+                    width: 100%;
+                }
+    
+                &:hover{
+                    transform: scale(1.1);
+                }
+    
+                .pag2sec__botonimagen{
+                    width: 90%;
+                    margin-top: 2rem;
+                }
+    
+                .pag2sec__botontexto{
+                    text-align: left;
+                    margin: 1rem;
+                    
+                    .pag2sec__botontextoColor1{
+                        color: black;
+                    }
+    
+                    .pag2sec__botontextoColor2{
+                        color: $colorPrimario;
+                    }
+    
+                    .pag2sec__botontextofondo{
+                        background-color: #7ed4f87e;
+                        display: inline;
+                        padding: 5px;
+                    }
+                }
+    
             }
-
         }
+
 
         .pag2sec__modal{
             background-color: #005c8354;
@@ -75,6 +106,11 @@
                 text-align: left;
                 background-color: white;
                 padding: 3rem;
+
+                
+                @media (max-width: 400px){
+                    display: none;
+                }
                 
                 .pag2sec__botontextoColor1{
                     color: black;
