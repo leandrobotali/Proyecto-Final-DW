@@ -682,18 +682,18 @@ li {
 }
 
 .header .container .header__divnav .nav_enlace--dropdown {
-  color: #dfd2c9;
+  color: black;
+  font-weight: 700;
 }
 
 .header .container .header__divnav .nav_enlace--dropdown:hover {
   -webkit-transform: scale(1.1);
           transform: scale(1.1);
   background-color: #ccb7a9;
-  color: black;
 }
 
 .header .container .header__divnav .dropdown-menu {
-  background-color: black;
+  background-color: #dfd2c9;
   width: 250px;
   text-align: center;
 }

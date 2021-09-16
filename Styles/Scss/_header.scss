@@ -38,17 +38,17 @@
             }
 
             .nav_enlace--dropdown{
-                color:$colorSecundario;
+                color:$colorPrimario;
+                font-weight: 700;
                 
                 &:hover {
                     transform: scale(1.1);
                     background-color: darken($color: $colorSecundario, $amount: 10%);
-                    color: $colorPrimario;
                 }
             }
 
             .dropdown-menu{
-                background-color: $colorPrimario;
+                background-color: $colorSecundario;
                 width: 250px;
                 text-align: center;
             }
