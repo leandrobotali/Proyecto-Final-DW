@@ -1,0 +1,100 @@
+.secMovil{
+    @include flex(row,center,center,nowrap);
+    width: 100%;
+    background: rgb(223,210,201);
+    background: radial-gradient(circle, rgba(223,210,201,1) 64%, rgba(78,115,141,1) 97%, rgba(2,65,110,1) 100%);
+    
+    .container{
+        width: 100%;
+        padding: 0;
+
+        .secMovil__h1{
+            color: $colorPrimario;
+            text-align: center;
+            padding: 4rem;
+            box-shadow: 0 10px 15px $colorBordes;
+            width: 100%;
+            margin-bottom: 0;
+            
+            @media (max-width: 576px){
+                font-size: 2rem;
+            }
+        }
+
+        .secMovil__nav{
+            @include flex(row,center,center,nowrap);
+            color: $colorPrimario;
+            text-align: center;
+            padding: 4rem;
+            box-shadow: 0 10px 15px $colorBordes;
+            width: 100%;
+
+            .secMovil__ul{
+                @include flex(row,space-between,center,nowrap);
+                width: 60%;
+
+                @media (max-width: 550px){
+                    flex-direction: column;
+                    width: 100%;
+                }
+
+                .nav-item{
+                    margin: 0;
+                    padding: 0;
+
+                    .nav__link{
+                        color: $colorPrimario;
+                        padding: 0;
+
+                        @media (max-width: 850px){
+                            font-size: 1.5rem;
+                        }
+                        @media (max-width: 680px){
+                            font-size: 1rem;
+                        }
+                        @media (max-width: 550px){
+                            margin-top: 2rem;
+                        }
+                       
+                        &:hover{
+                            color: lighten($color: $colorPrimario, $amount: 30%);
+                            text-decoration: underline;
+                        }
+                    }
+
+                }
+            }
+        }
+
+        .card-body{
+            padding: 0;
+            
+            .contenedor{
+                width: 50%;
+                margin: 5rem auto 10rem auto;
+
+                @media (max-width: 700px){
+                    width: 80%;
+                }
+
+                .movil__h2{
+                    font-size: 3rem; 
+                    margin: 5rem 1rem;                  
+                }
+
+                .span__negrita{
+                    font-weight: 700;
+                }
+
+                .movil__texto{
+                    font-size: 2rem;
+                    margin:3rem 1rem;
+                }
+
+                .span__color{
+                    color: $colorSub;
+                }
+            }
+        }
+    }
+}

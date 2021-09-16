@@ -1,0 +1,187 @@
+.secTelevision{
+    @include flex(row,center,center,nowrap);
+    width: 100%;
+    background: rgb(223,210,201);
+    background: radial-gradient(circle, rgba(223,210,201,1) 64%, rgba(78,115,141,1) 97%, rgba(2,65,110,1) 100%);
+    
+    .container{
+        width: 100%;
+        padding: 0;
+
+        .secTelevision__h1{
+            color: $colorPrimario;
+            text-align: center;
+            padding: 4rem;
+            box-shadow: 0 10px 15px $colorBordes;
+            width: 100%;
+            margin-bottom: 0;
+            
+            @media (max-width: 576px){
+                font-size: 2rem;
+            }
+        }
+
+        .secTelevision__nav{
+            @include flex(row,center,center,nowrap);
+            color: $colorPrimario;
+            text-align: center;
+            padding: 4rem;
+            box-shadow: 0 10px 15px $colorBordes;
+            width: 100%;
+
+            .secTelevision__ul{
+                @include flex(row,space-between,center,nowrap);
+                width: 60%;
+
+                @media (max-width: 550px){
+                    flex-direction: column;
+                    width: 100%;
+                }
+
+                .nav-item{
+                    margin: 0;
+                    padding: 0;
+
+                    .nav__link{
+                        color: $colorPrimario;
+                        padding: 0;
+
+                        @media (max-width: 850px){
+                            font-size: 1.5rem;
+                        }
+                        @media (max-width: 680px){
+                            font-size: 1rem;
+                        }
+                        @media (max-width: 550px){
+                            margin-top: 2rem;
+                        }
+                       
+                        &:hover{
+                            color: lighten($color: $colorPrimario, $amount: 30%);
+                            text-decoration: underline;
+                        }
+                    }
+
+                }
+            }
+        }
+
+        .card-body{
+            padding: 0;
+            
+            .div1{
+                background: rgb(251,209,180);
+                background: radial-gradient(circle, rgba(251,209,180,1) 6%, rgba(96,96,96,1) 100%);
+                justify-content: center;
+    
+                .div2{
+                    @include flex(column,center,center,nowrap);
+                    margin: 5rem auto;
+
+                    .Television__texto{
+                        color: black;
+                        font-size: 2rem;
+                    }
+                    .Television__texto--center{
+                        text-align: center;
+                        color: black;
+                        font-size: 5rem;
+                    }
+                }
+
+                .div3{
+                    margin: 5rem auto;
+
+                    .Television__precio{
+                        text-align: center;
+
+                        .precio{
+                            text-align: center;
+                            color: black;
+                            font-size: 5rem;
+                        }
+                            
+                    }
+                    .div__boton{
+                        text-align: center;
+
+                        .precio__boton{
+                            margin: 5rem auto;
+                            width: 10rem;
+                            height: 5rem;
+                            border-radius: 30px;
+                            background-color: lighten($color: $colorBordes, $amount: 10%);
+                            color: $colorPrimario;
+                            font-size: 1rem;
+
+                            &:hover{
+                                background-color: darken($color: $colorBordes, $amount: 20%);
+                            }
+                        }
+                    }
+                }
+    
+            }
+
+            .contenedor{
+                width: 70%;
+                margin: 5rem auto 10rem auto;
+
+                .Television__imagen{
+                    width: 100%;
+                }
+                
+                .div6{
+                    @include flex(column,center,center,nowrap);
+                    border-left: 5px solid #7d7670;
+                    border-radius: 20px;
+                }
+
+                .div8{
+                    @include flex(column,center,center,nowrap);
+                    border-right: 5px solid #7d7670;
+                    border-radius: 20px;
+                }
+
+                .div12{
+                    @include flex(column,center,center,nowrap);
+                    border-left: 5px solid #7d7670;
+                    border-radius: 20px;
+                }
+
+                .div14{
+                    @include flex(column,center,center,nowrap);
+                    border-right: 5px solid #7d7670;
+                    border-radius: 20px;
+                }
+
+                .div18{
+                    @include flex(column,center,center,nowrap);
+                    border-left: 5px solid #7d7670;
+                    border-radius: 20px;
+                }
+
+                .font-50{
+
+                    @media (max-width: 500px){
+                        font-size: 2.5rem;
+                    }
+                }
+
+                .font-30{
+
+                    @media (max-width: 500px){
+                        font-size: 1.5rem;
+                    }
+                }
+
+                .font-20{
+
+                    @media (max-width: 500px){
+                        font-size: 1rem;
+                    }
+                }
+            }
+        }
+    }
+}
