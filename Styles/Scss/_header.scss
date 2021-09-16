@@ -1,5 +1,7 @@
 .header{
     @include flex(row, center, center, nowrap);
+    background: rgb(223,210,201);
+    background: radial-gradient(circle, rgba(223,210,201,1) 64%, rgba(78,115,141,1) 97%, rgba(2,65,110,1) 100%);
     
     .container{
         @include flex (column,center,center,nowrap);
@@ -7,8 +9,8 @@
 
         .header__divtitulo{
             @include flex(row,space-between,center,nowrap);
-            background-color: black;
             width:100%;
+            box-shadow: 0 10px 15px $colorBordes;
 
             .header__imagen{
                 width: 100%;
@@ -17,22 +19,20 @@
 
         .header__divnav{
             @include flex(row,center,center,nowrap);
-            background-color: $colorPrimario;
             width:100%;
+            padding: 1rem;
+            box-shadow: 0 10px 15px $colorBordes;
 
             .nav__boton{
                  background-color: $colorSecundario;   
             }
 
             .nav_enlace{
-                color:white;
-                border-bottom: 3px solid $colorPrimario;
+                color:$colorPrimario;
 
                 &:hover {
                     transform: scale(1.2);
-                    background-color: $colorPrimario;
                     color: $colorSub;
-                    border-bottom: 3px solid $colorSub;
                 }
 
             }
@@ -42,8 +42,8 @@
                 
                 &:hover {
                     transform: scale(1.1);
-                    background-color: $colorPrimario;
-                    color: lighten($color: $colorSecundario, $amount: 20%);
+                    background-color: darken($color: $colorSecundario, $amount: 10%);
+                    color: $colorPrimario;
                 }
             }
 

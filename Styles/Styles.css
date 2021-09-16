@@ -597,6 +597,8 @@ li {
           align-items: center;
   -ms-flex-wrap: nowrap;
       flex-wrap: nowrap;
+  background: #dfd2c9;
+  background: radial-gradient(circle, #dfd2c9 64%, #4e738d 97%, #02416e 100%);
 }
 
 .header .container {
@@ -634,8 +636,9 @@ li {
           align-items: center;
   -ms-flex-wrap: nowrap;
       flex-wrap: nowrap;
-  background-color: black;
   width: 100%;
+  -webkit-box-shadow: 0 10px 15px #b4c7cf;
+          box-shadow: 0 10px 15px #b4c7cf;
 }
 
 .header .container .header__divtitulo .header__imagen {
@@ -658,8 +661,10 @@ li {
           align-items: center;
   -ms-flex-wrap: nowrap;
       flex-wrap: nowrap;
-  background-color: black;
   width: 100%;
+  padding: 1rem;
+  -webkit-box-shadow: 0 10px 15px #b4c7cf;
+          box-shadow: 0 10px 15px #b4c7cf;
 }
 
 .header .container .header__divnav .nav__boton {
@@ -667,16 +672,13 @@ li {
 }
 
 .header .container .header__divnav .nav_enlace {
-  color: white;
-  border-bottom: 3px solid black;
+  color: black;
 }
 
 .header .container .header__divnav .nav_enlace:hover {
   -webkit-transform: scale(1.2);
           transform: scale(1.2);
-  background-color: black;
-  color: #083ab8;
-  border-bottom: 3px solid #083ab8;
+  color: #2a6b99;
 }
 
 .header .container .header__divnav .nav_enlace--dropdown {
@@ -686,8 +688,8 @@ li {
 .header .container .header__divnav .nav_enlace--dropdown:hover {
   -webkit-transform: scale(1.1);
           transform: scale(1.1);
-  background-color: black;
-  color: white;
+  background-color: #ccb7a9;
+  color: black;
 }
 
 .header .container .header__divnav .dropdown-menu {
@@ -2190,7 +2192,7 @@ li {
 }
 
 .datosCuenta .container .row .mejorar__cuadro .mejorar__color {
-  color: #083ab8;
+  color: #2a6b99;
 }
 
 .datosCuenta .container .row .mejorar__cuadro .boton {
@@ -3173,6 +3175,6 @@ li {
 }
 
 .secMovil .container .card-body .contenedor .span__color {
-  color: #083ab8;
+  color: #2a6b99;
 }
 /*# sourceMappingURL=Styles.css.map */
