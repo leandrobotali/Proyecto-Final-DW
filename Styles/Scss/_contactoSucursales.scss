@@ -2,27 +2,27 @@
     @include flex (column, center, center, nowrap);
     background: rgb(223,210,201);
     background: radial-gradient(circle, #dfd2c9 64%, #4e738d 97%, #02416e 100%);
-    padding-bottom: 5rem;
+    padding-bottom: 8rem;
 
     .contactoSucursales__h1{
         color: $colorPrimario;
         text-align: center;
-        margin-bottom: 2rem;
         padding: 4rem;
-        box-shadow: 0 10px 15px $colorBordes;
         width: 100%;
+        background-color: rgba(161, 154, 149, 0.822);
     
         @media (max-width: 576px){
             font-size: 2rem;
         }
     }
+    
     .contactoSucursales__h2{
         color: $colorPrimario;
         text-align: center;
         margin-bottom: 7rem;
         padding: 4rem;
-        box-shadow: 0 10px 15px $colorBordes;
         width: 100%;
+        box-shadow: 0 10px 15px $colorBordes;
     
         @media (max-width: 576px){
             font-size: 2rem;

@@ -8,6 +8,7 @@
         text-align: center;
         margin-bottom: 7rem;
         padding: 4rem;
+        background-color: rgba(161, 154, 149, 0.822);
         box-shadow: 0 10px 15px $colorBordes;
         width: 100%;
         
@@ -21,11 +22,34 @@
         padding: 1rem;
         margin: 0 auto 3rem auto;
 
+        @media (max-width: 768px){
+            width: 40%;
+        }
+        @media (max-width: 600px){
+            width: 50%;
+        }
+        @media (max-width: 500px){
+            width: 60%;
+        }
+        @media (max-width: 400px){
+            width: 70%;
+        }
+        @media (max-width: 300px){
+            width: 90%;
+        }
+
         .datos__div1{
             @include flex(row,space-evenly,center,nowrap);
 
             @media (max-width: 768px){
                 flex-direction: column;
+            }
+
+            .datos__div3{
+                
+                @media (max-width: 768px){
+                    width: 100%;
+                }
             }
 
             .datos__sub{
@@ -39,7 +63,15 @@
             @include flex(row,center,center,nowrap);
 
             @media (max-width: 768px){
-                flex-direction: column;
+                @include flex(column,left,center,nowrap);
+            }
+
+            .datos__div2--margen{
+                margin-right: 5rem;
+
+                @media (max-width: 350px){
+                    margin-right: 0;
+                }
             }
 
             .datos__sub{
@@ -62,6 +94,7 @@
             @include flex(row,center,center,nowrap);
             padding: 4rem;
             box-shadow: 0 10px 15px $colorBordes;
+            background-color: rgba(161, 154, 149, 0.822);
 
             @media (max-width: 550px){
                 padding: 4rem 0;
@@ -71,7 +104,7 @@
                 @include flex(row,space-between,center,nowrap);                
                 width: 90%;
 
-                @media (max-width: 550px){
+                @media (max-width: 700px){
                     flex-direction: column;
                     width: 100%;
                 }
@@ -87,9 +120,7 @@
                         @media (max-width: 850px){
                             font-size: 1.5rem;
                         }
-                        @media (max-width: 680px){
-                            font-size: 1rem;
-                        }
+
                         @media (max-width: 550px){
                             margin-top: 2rem;
                         }

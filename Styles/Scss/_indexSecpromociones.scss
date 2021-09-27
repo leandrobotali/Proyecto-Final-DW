@@ -48,13 +48,25 @@
                         &:hover{
                             transform: scale(1.1);
                         }
+
+                        .font-20{
+                            @media (max-width: 500px){
+                                font-size: 1.5rem;
+                            }
+                        }
+
+                        .font-30{
+                            @media (max-width: 500px){
+                                font-size: 2rem;
+                            }
+                        }
         
                         .promociones__precio{
                             text-align: center;
                             background-color: $colorSecundario;
                             height: 10rem;
         
-                            .pormo__tachado{
+                            .promo__tachado{
                                 text-decoration: line-through;
                             }
                         }

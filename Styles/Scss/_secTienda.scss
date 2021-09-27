@@ -8,6 +8,7 @@
         text-align: center;
         margin-bottom: 7rem;
         padding: 4rem;
+        background-color: rgba(161, 154, 149, 0.822);
         box-shadow: 0 10px 15px $colorBordes;
         width: 100%;
         
@@ -17,17 +18,17 @@
     }   
     
     .container{
-        width: 80%;
+        width: 70%;
         @include flex(row,center,center,nowrap);
         margin: 0rem auto 7rem auto;
 
         @media (max-width: 950px){
             flex-direction: column;
         }
-        @media (max-width: 570px){
-            width: 90%;
+        @media (max-width: 750px){
+            width: 85%;
         }
-        @media (max-width: 300px){
+        @media (max-width: 600px){
             width: 100%;
         }
 
@@ -46,7 +47,6 @@
                 background-color: $colorSecundario;
                 margin: 2rem;
                 box-shadow: 0 15px 10px $colorBordes;
-                width: 50%;
     
                 @media (max-width: 950px){
                     width: 40%;
@@ -63,6 +63,12 @@
     
                 &:hover{
                     transform: scale(1.1);
+                }
+
+                .btn-primary{
+                    background-color: $colorSecundario;
+                    border:none;
+                    box-shadow: 0 1px 1px $colorSecundario;
                 }
     
                 .pag2sec__botonimagen{

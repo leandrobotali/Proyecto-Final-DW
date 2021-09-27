@@ -6,10 +6,11 @@
     .cuentaForm__h1{
         color: $colorPrimario;
         text-align: center;
-        margin-bottom: 7rem;
+        margin-bottom: 2rem;
         padding: 4rem;
-        box-shadow: 0 10px 15px $colorBordes;
         width: 100%;
+        background-color: rgba(161, 154, 149, 0.822);
+        box-shadow: 0 10px 15px $colorBordes;
     
         @media (max-width: 576px){
             font-size: 2rem;

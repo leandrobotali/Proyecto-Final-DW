@@ -21,7 +21,6 @@
             @include flex(row,center,center,nowrap);
             width:100%;
             padding: 1rem;
-            box-shadow: 0 10px 15px $colorBordes;
 
             .nav__boton{
                  background-color: $colorSecundario;   
